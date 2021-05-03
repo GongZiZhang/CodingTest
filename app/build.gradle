@@ -1,0 +1,64 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+}
+
+android {
+    compileSdkVersion build_versions.compile_sdk
+    buildToolsVersion build_versions.build_tools
+
+    buildFeatures {
+        viewBinding true
+    }
+    defaultConfig {
+        applicationId "com.arcblock.arcblockcodingtest"
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+        versionCode app_version.version_code
+        versionName app_version.version_name
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            jniDebuggable false
+            debuggable false
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            jniDebuggable true
+            debuggable true
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation deps.kotlin.stdlib
+    implementation deps.core_ktx
+    implementation deps.app_compat
+    implementation deps.constraint_layout
+    implementation deps.lifecycle.viewmodel
+    implementation deps.lifecycle.livedata
+    implementation deps.activity_ktx
+    implementation deps.fragment_ktx
+    implementation deps.viewbinding_base_ktx
+    implementation deps.base_adapter
+    implementation deps.retrofit2.retrofit
+    implementation deps.retrofit2.converter_son
+    implementation deps.swiperefreshlayout
+    implementation deps.coil_kt
+
+}

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ArcBlockCodingTest</string>
+    <string name="error_string">请求错误，请刷新重试</string>
+</resources>
