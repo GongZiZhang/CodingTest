@@ -1,4 +1,4 @@
-package com.arcblock.arcblockcodingtest.ui
+package com.arcblock.arcblockcodingtest.ui.adapter
 
 import ArticListDataItem
 import android.widget.ImageView

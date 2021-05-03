@@ -4,7 +4,6 @@ import ArticListDataItem
 import android.content.Intent
 import android.view.KeyEvent
 import androidx.activity.viewModels
-import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.arcblock.arcblockcodingtest.R
 import com.arcblock.arcblockcodingtest.base.BaseBindingActivity
@@ -12,6 +11,7 @@ import com.arcblock.arcblockcodingtest.databinding.ActivityArticlistBinding
 import com.arcblock.arcblockcodingtest.base.contant.ContantData.ARG1
 import com.arcblock.arcblockcodingtest.ext.showToast
 import com.arcblock.arcblockcodingtest.ext.toConversion
+import com.arcblock.arcblockcodingtest.ui.adapter.ArticListItemAdapter
 import kotlin.system.exitProcess
 
 /**
